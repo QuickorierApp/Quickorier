@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <data>
+      <variable
+          name="EditViewModel"
+          type="com.project.QuicKorier.viewmodel.EditUserViewModel" />
+   </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginTop="60dp"
+       app:layout_constraintTop_toTopOf="parent"
+       android:id="@+id/linearTop">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:orientation="vertical"
+          android:padding="2dp">
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/profile_image"
+             android:layout_width="110dp"
+             android:layout_height="110dp"
+             android:src="@drawable/ic_launcher_background"
+             app:civ_border_width="2dp"
+             app:civ_border_color="#FF000000"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="update profile"
+          android:padding="2dp"
+          android:layout_marginTop="2dp"
+          android:textColor="@color/com_facebook_button_login_background_color">
+
+      </TextView>
+   </LinearLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:error="@{loginViewModel.errorEmail}"
+          app:errorEnabled="true">
+
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/editProfileUsernameEditText"
+             style="@android:style/TextAppearance.Medium"
+             android:hint="@string/editProfileHintUsername"
+             android:text="@{loginViewModel.userName}"
+             />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:error="@{loginViewModel.errorEmail}"
+          app:errorEnabled="true">
+
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/editProfileUsernameEditText"
+             style="@android:style/TextAppearance.Medium"
+             android:hint="@string/editProfileHintDesignation"
+             android:text="@{loginViewModel.designation}"
+             />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:error="@{EditViewModel.errorEmail}"
+          app:errorEnabled="true">
+
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/editProfileUsernameEditText"
+             style="@android:style/TextAppearance.Medium"
+             android:hint="@string/editProfileHintDateOfBirth"
+             android:text="@{EditViewModel.email}"
+             />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+   </LinearLayout>
+
+   <com.google.android.material.button.MaterialButton
+       android:layout_width="match_parent"
+       android:text="@string/update"
+       android:layout_marginBottom="5dp"
+       style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+       android:layout_height="wrap_content"
+       android:background="@drawable/btn_oval_design"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:textSize="16dp"
+       android:onClick="@{(v) -> EditViewModel.onClick(v)}"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

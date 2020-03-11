@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login"
+            android:contentDescription="TODO">
+
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/login_signup"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:text="@string/continuePhoneNumber"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_oval_design"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".8"
+            android:orientation="horizontal"
+            android:background="@drawable/facebook_btn"
+            android:layout_marginLeft="10dp"
+            android:elevation="5dp"
+            android:gravity="center">
+
+            <ImageView
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                android:background="#0000"
+                android:layout_gravity="center"
+                android:src="@drawable/com_facebook_button_icon"
+                />
+            <TextView
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/facebook"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2">
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".8"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/google_btn"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:elevation="5dp">
+
+            <ImageView
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:background="#0000"
+                android:src="@drawable/common_signin_btn_icon_normal_dark"
+                android:layout_gravity="center"
+                />
+            <TextView
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:textColor="@color/black"
+                android:text="@string/google"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
